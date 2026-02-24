@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: main            # "main" is DuckDB's default schema name
+    tables:
+      - name: raw_events  # Must exactly match the table name from load.py

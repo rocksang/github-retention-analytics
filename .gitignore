@@ -1,0 +1,20 @@
+# DuckDB database file — too large for GitHub
+data/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# dbt build artifacts
+dbt_project/target/
+dbt_project/logs/
+logs/
+
+# Evidence build artifacts
+reports/.evidence/
+reports/.svelte-kit/
+reports/node_modules/
+reports/sources/github/github.duckdb
+
+# Python
+__pycache__/
+*.pyc

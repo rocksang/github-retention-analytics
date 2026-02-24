@@ -1,0 +1,18 @@
+name: github_analytics
+version: 1.0.0
+profile: github_analytics   
+
+model-paths: ["models"]
+target-path: "target"        
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  github_analytics:
+    staging:
+      materialized: view
+
+    intermediate:
+      materialized: table
+
+    marts:
+      materialized: table

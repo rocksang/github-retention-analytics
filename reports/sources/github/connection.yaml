@@ -1,0 +1,4 @@
+name: github
+type: duckdb
+options:
+  filename: github.duckdb
