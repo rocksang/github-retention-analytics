@@ -18,16 +18,19 @@ This project answers three core PM questions:
 
 | Metric | Value |
 |---|---|
-| Total users observed | 144,261 |
-| Activation rate (pushed code) | 60.5% |
-| Largest segment | At Risk (93,965 users) |
-| Second largest segment | Casual (50,315 users) |
+| Total events observed | 2,238,431 |
+| Total users observed | 370,969 |
+| Activation rate (pushed code) | 61.1% |
+| Largest segment | At Risk (256,400 users) |
+| Second largest segment | Casual (101,260 users) |
+| Week 1 retention | 15.9% |
 
 **Top PM insights:**
-- 60.5% of users pushed code — strong activation, but 39.5% never got past browsing
-- The star → fork → push drop-off is the biggest conversion gap in the funnel
-- Users who perform 3+ action types in their first session are disproportionately likely to become power users
-- Week 2 is the critical retention window — re-engagement nudges at day 8-10 could recover lapsing users
+- 61.1% of users pushed code — strong activation, but 38.9% never got past browsing
+- Unusually, more users pushed code (226,542) than starred a repo (61,197) — suggests the data skews toward active contributors rather than casual browsers
+- Week 1 → Week 2 retention dropped from 15.9% to 15.3% — a relatively flat curve suggesting the users who return once tend to stick
+- No Power Users in the dataset — users appear across 3 separate weeks but within 3-hour windows, limiting active-days accumulation. A continuous 30-day window would surface this segment
+- The star → fork → push conversion gap remains the primary onboarding opportunity 
 
 ---
 
