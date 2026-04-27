@@ -2,21 +2,22 @@ name: Refresh Data & Deploy
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  
-  workflow_dispatch:       
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install Python dependencies
         run: pip install dbt-duckdb
@@ -30,7 +31,7 @@ jobs:
       - name: Build Evidence dashboard
         run: cd reports && npm install && npm run build
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: reports/build
