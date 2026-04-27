@@ -1,4 +1,7 @@
 import duckdb
+import os
+
+os.makedirs("data", exist_ok=True)
 
 con = duckdb.connect("data/github.duckdb")
 
@@ -7,6 +10,7 @@ DATES_AND_HOURS = [
     ("2024-03-08", range(9, 12)),
     ("2024-03-15", range(9, 12)),
 ]
+
 urls = []
 for date, hours in DATES_AND_HOURS:
     for hour in hours:
@@ -43,6 +47,7 @@ result = con.execute("""
     ORDER BY count DESC
     LIMIT 10
 """).fetchall()
+
 for row in result:
     print(f"  {row[0]:<30} {row[1]:>10,}")
 
