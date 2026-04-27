@@ -47,11 +47,16 @@ group by engagement_segment
 order by users desc
 ```
 
-<DonutChart
-    data={segments}
-    name=engagement_segment
-    value=users
-    title="User Segments"
+<ECharts config={
+  {
+    series: [{
+      type: 'pie',
+      radius: ['40%', '70%'],
+      data: segments.map(d => ({ name: d.engagement_segment, value: d.users }))
+    }]
+  }
+}
+height=300
 />
 
 ---
