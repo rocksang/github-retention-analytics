@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: Install Python dependencies
-        run: pip install dbt-duckdb
+        run: pip install dbt-duckdb duckdb requests
 
       - name: Stream data into DuckDB
         run: python ingestion/load.py
