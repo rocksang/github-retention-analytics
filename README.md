@@ -64,7 +64,6 @@ A Growth PM or Data PM at a developer-focused SaaS platform making decisions abo
 | Visualization | Jupyter + Plotly | Interactive charts, narrative format |
 | Orchestration | GitHub Actions | Free, automated weekly refresh |
 
-**Total cost: $0**
 
 ---
 
